@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Play · Vishal S</title>
+  <meta name="description" content="Play Pac-Man, Team 2, SSN CSE's raylib/C game, ported to the browser." />
+  <meta name="theme-color" content="#0c0815" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sub.css" />
+  <link rel="stylesheet" href="css/play.css" />
+</head>
+<body data-page="play">
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-sky"></div>
+    <img class="loader-layer ld1" src="images/scenes/night-far.svg" alt="" />
+    <img class="loader-layer ld2" src="images/scenes/night-mid.svg" alt="" />
+    <img class="loader-layer ld3" src="images/scenes/night-ground.svg" alt="" />
+    <div class="loader-mark"><span>V</span><span>S</span><span>L</span></div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="skyglow" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="logo" aria-label="VSL, home"><svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 2.6A9.5 9.5 0 1 0 21.4 17 7.8 7.8 0 1 1 15.5 2.6Z"/></svg>VSL</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="nav-links" class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#journey">Journey</a>
+      <a href="index.html#contact">Contact</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a class="ext" href="play.html" aria-current="page">Play<sup>↗</sup></a>
+      <a class="ext" href="art.html">Art<sup>↗</sup></a>
+      <a class="ext" href="piano.html">Piano<sup>↗</sup></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="arcade section" id="arcade">
+      <div class="wrap">
+        <div class="section-head">
+          <h1 class="t-h2 reveal">Pac-Man, <span class="accent">built in C.</span></h1>
+          <p class="lead reveal">Built with Team 2 at SSN CSE in C and raylib, then ported line by line to JavaScript. Same maze, same BFS ghosts, same cheat codes.</p>
+        </div>
+        <div class="cabinet reveal">
+          <div class="cab-screen">
+            <canvas id="pac-canvas" width="1230" height="730" tabindex="0" aria-label="Pac-Man game. Arrow keys move, Space starts, Escape pauses."></canvas>
+            <button id="pac-overlay" class="pac-overlay" type="button">
+              <span class="pac-ov-title"><span class="kb-only">Click</span><span class="touch-only">Tap</span> to play</span>
+              <span class="pac-ov-sub"><span class="kb-only">Arrow keys move · Space starts · Esc pauses</span><span class="touch-only">Tap to start · swipe or use the pad to move</span></span>
+            </button>
+          </div>
+          <div class="cab-bar">
+            <p class="cab-hint">Cheat codes from the original still work: <b>CHEAT</b>, <b>ASPIRIN</b>, <b>FREEZE</b>, <b>GOHOME</b>.</p>
+            <div class="cab-btns">
+              <button type="button" id="pac-mute" aria-pressed="false">Sound on</button>
+              <button type="button" id="pac-fs">Fullscreen</button>
+            </div>
+          </div>
+          <div class="pad" aria-label="Touch controls">
+            <button type="button" data-key="UP" aria-label="Up">▲</button>
+            <button type="button" data-key="LEFT" aria-label="Left">◀</button>
+            <button type="button" data-key="SPACE" class="pad-start" aria-label="Start">Start</button>
+            <button type="button" data-key="RIGHT" aria-label="Right">▶</button>
+            <button type="button" data-key="DOWN" aria-label="Down">▼</button>
+          </div>
+        </div>
+      </div>
+      <div class="horizon" data-pal="ember" aria-hidden="true"></div>
+    </section>
+
+    <section class="wrap next" aria-label="Keep exploring">
+      <a href="index.html#work" class="next-tile warm magnetic"><span class="t-label">Back to</span><span class="next-title">All projects</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a href="art.html" class="next-tile  magnetic"><span class="t-label">Next</span><span class="next-title">Art</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> <span data-site="name">Vishal S</span></p>
+    <a href="index.html">Back to the main site</a>
+  </footer>
+
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/pacman.js"></script>
+  <script>bootCommon();</script>
+</body>
+</html>

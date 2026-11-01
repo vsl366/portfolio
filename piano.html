@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Piano · Vishal S</title>
+  <meta name="description" content="Vishal S at the piano. Classical favourites and a playable keyboard." />
+  <meta name="theme-color" content="#0c0815" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sub.css" />
+</head>
+<body data-page="piano">
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-sky"></div>
+    <img class="loader-layer ld1" src="images/scenes/night-far.svg" alt="" />
+    <img class="loader-layer ld2" src="images/scenes/night-mid.svg" alt="" />
+    <img class="loader-layer ld3" src="images/scenes/night-ground.svg" alt="" />
+    <div class="loader-mark"><span>V</span><span>S</span><span>L</span></div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="skyglow" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="logo" aria-label="VSL, home"><svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 2.6A9.5 9.5 0 1 0 21.4 17 7.8 7.8 0 1 1 15.5 2.6Z"/></svg>VSL</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="nav-links" class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#journey">Journey</a>
+      <a href="index.html#contact">Contact</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a class="ext" href="play.html">Play<sup>↗</sup></a>
+      <a class="ext" href="art.html">Art<sup>↗</sup></a>
+      <a class="ext" href="piano.html" aria-current="page">Piano<sup>↗</sup></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="panels-scene" aria-label="Piano">
+      <div class="panels-sticky">
+        <div class="panels" id="panels" aria-hidden="true"></div>
+        <div class="panels-title">
+          <h1>Piano</h1>
+          <p>Classical · Keys · Practice</p>
+        </div>
+        <div class="horizon" data-pal="dusk" data-mode="scene" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="play">
+      <div class="intro">
+        <div class="intro-main">
+          <h2 class="t-h2 reveal">Go on, <span class="accent">play something.</span></h2>
+          <p class="lead reveal">Classical piano is how I switch off. Click the keys, tap them or use your keyboard.</p>
+        </div>
+        <dl class="facts reveal">
+          <div><dt>Keys</dt><dd><kbd>A</kbd> → <kbd>'</kbd> white · row above sharps</dd></div>
+          <div><dt>Octave</dt><dd><kbd>Z</kbd> down · <kbd>X</kbd> up</dd></div>
+          <div><dt>Sounds</dt><dd>Soft piano · Bell · Synth</dd></div>
+          <div><dt>Recordings</dt><dd>Coming soon</dd></div>
+        </dl>
+      </div>
+      <div class="keys-wrap reveal">
+        <canvas id="note-fx" aria-hidden="true"></canvas>
+        <div class="keys-top">
+          <span class="brand">VSL · Grand</span>
+          <span class="hint">Octave <b id="oct">C4</b> · <kbd>Z</kbd> <kbd>X</kbd></span>
+          <label class="hint">Sound
+            <select id="voice"><option value="piano">Soft piano</option><option value="bell">Bell</option><option value="synth">Synth</option></select>
+          </label>
+        </div>
+        <div class="keys-scroll"><div class="keys" id="keys" role="group" aria-label="Piano keyboard"></div></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="pieces">
+      <h2 class="t-h2 reveal">Pieces I <span class="accent">love to play.</span></h2>
+      <ol class="tracks" id="piece-list"></ol>
+    </section>
+
+    <section class="wrap next" aria-label="Keep exploring">
+      <a href="art.html" class="next-tile warm magnetic"><span class="t-label">Next</span><span class="next-title">Art</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a href="index.html" class="next-tile  magnetic"><span class="t-label">Back to</span><span class="next-title">The main site</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> <span data-site="name">Vishal S</span></p>
+    <a href="index.html">Back to the main site</a>
+  </footer>
+
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/sub.js"></script>
+</body>
+</html>

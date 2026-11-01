@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art · Vishal S</title>
+  <meta name="description" content="Sketches, digital art and photography by Vishal S." />
+  <meta name="theme-color" content="#0c0815" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sub.css" />
+</head>
+<body data-page="art">
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-sky"></div>
+    <img class="loader-layer ld1" src="images/scenes/night-far.svg" alt="" />
+    <img class="loader-layer ld2" src="images/scenes/night-mid.svg" alt="" />
+    <img class="loader-layer ld3" src="images/scenes/night-ground.svg" alt="" />
+    <div class="loader-mark"><span>V</span><span>S</span><span>L</span></div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="skyglow" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="logo" aria-label="VSL, home"><svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 2.6A9.5 9.5 0 1 0 21.4 17 7.8 7.8 0 1 1 15.5 2.6Z"/></svg>VSL</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="nav-links" class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#journey">Journey</a>
+      <a href="index.html#contact">Contact</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a class="ext" href="play.html">Play<sup>↗</sup></a>
+      <a class="ext" href="art.html" aria-current="page">Art<sup>↗</sup></a>
+      <a class="ext" href="piano.html">Piano<sup>↗</sup></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="panels-scene" aria-label="Art">
+      <div class="panels-sticky">
+        <div class="panels" id="panels" aria-hidden="true"></div>
+        <div class="panels-title">
+          <h1>Art</h1>
+          <p>Pencil · Pixels · Photographs</p>
+        </div>
+        <div class="horizon" data-pal="dusk" data-mode="scene" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="gallery">
+      <div class="intro">
+        <div class="intro-main">
+          <h2 class="t-h2 reveal">Sketches, pixels <span class="accent">and photographs.</span></h2>
+          <p class="lead reveal">Graphite portraits, Ibis Paint experiments, sprites for my Unity games and photos from wherever I happen to be.</p>
+        </div>
+        <dl class="facts reveal">
+          <div><dt>Mediums</dt><dd>Graphite · Ibis Paint · Photography</dd></div>
+          <div><dt>Also drew</dt><dd>Sprites for Hill Climb &amp; Flappy (Unity)</dd></div>
+          <div><dt>Status</dt><dd>Gallery in progress</dd></div>
+        </dl>
+      </div>
+      <div class="filters reveal" role="group" aria-label="Filter by medium" id="filters"></div>
+      <div class="gallery" id="art-grid"></div>
+    </section>
+
+    <section class="wrap next" aria-label="Keep exploring">
+      <a href="piano.html" class="next-tile warm magnetic"><span class="t-label">Next</span><span class="next-title">Piano</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a href="index.html" class="next-tile  magnetic"><span class="t-label">Back to</span><span class="next-title">The main site</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> <span data-site="name">Vishal S</span></p>
+    <a href="index.html">Back to the main site</a>
+  </footer>
+
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/sub.js"></script>
+</body>
+</html>

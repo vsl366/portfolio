@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vishal S</title>
+  <meta name="description" content="Vishal S. Computer Science at SSN and Data Science at IIT Madras. Research in NLP, backend systems, games, sketching and classical piano." />
+  <meta name="theme-color" content="#0c0815" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="preload" as="image" href="images/scenes/night-far.svg" />
+  <link rel="preload" as="image" href="images/scenes/night-mid.svg" />
+  <link rel="preload" as="image" href="images/scenes/night-ground.svg" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-sky"></div>
+    <img class="loader-layer ld1" src="images/scenes/night-far.svg" alt="" />
+    <img class="loader-layer ld2" src="images/scenes/night-mid.svg" alt="" />
+    <img class="loader-layer ld3" src="images/scenes/night-ground.svg" alt="" />
+    <div class="loader-mark"><span>V</span><span>S</span><span>L</span></div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="skyglow" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="VSL, home"><svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 2.6A9.5 9.5 0 1 0 21.4 17 7.8 7.8 0 1 1 15.5 2.6Z"/></svg>VSL</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="nav-links" class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a class="ext" href="play.html">Play<sup>↗</sup></a>
+      <a class="ext" href="art.html">Art<sup>↗</sup></a>
+      <a class="ext" href="piano.html">Piano<sup>↗</sup></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO: moonlit canyon ================= -->
+    <section class="hero-scene" id="top">
+      <div class="hero-sticky">
+        <div class="sky" aria-hidden="true"></div>
+        <div class="moon-wrap" aria-hidden="true"><div class="moon-halo"></div><div class="moon"></div></div>
+        <img class="layer l-far" src="images/scenes/night-far.svg" alt="" aria-hidden="true" />
+        <img class="layer l-mid" src="images/scenes/night-mid.svg" alt="" aria-hidden="true" />
+        <img class="layer l-cliff-l" src="images/scenes/night-cliff-left.svg" alt="" aria-hidden="true" />
+        <img class="layer l-cliff-r" src="images/scenes/night-cliff-right.svg" alt="" aria-hidden="true" />
+
+        <div class="hero-copy">
+          <h1 class="t-hero hero-title">Vishal S</h1>
+          <p class="hero-sub">Developer and ML researcher. I also sketch, take photographs and play classical piano.</p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-neon magnetic">View work</a>
+            <a href="#contact" class="btn btn-ghost magnetic">Contact me</a>
+            <a href="files/Vishal_S_Resume.pdf" class="btn btn-ghost magnetic" download>Resume <svg class="btn-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a>
+          </div>
+        </div>
+
+        <img class="layer l-ground" src="images/scenes/night-ground.svg" alt="" aria-hidden="true" />
+      </div>
+    </section>
+
+    <!-- ================= ASSEMBLY: a thousand little pieces ================= -->
+    <section class="assemble" id="me" aria-label="Who I am">
+      <div class="assemble-sticky">
+        <div class="nebula" aria-hidden="true"><i class="nb nb1"></i><i class="nb nb2"></i><i class="nb nb3"></i></div>
+        <img class="as-ground as-ground-b" src="images/scenes/pieces-back.svg" alt="" aria-hidden="true" />
+        <canvas id="assemble-canvas" aria-hidden="true"></canvas>
+        <div class="as-clouds" aria-hidden="true">
+          <svg viewBox="-200 -40 1400 420" preserveAspectRatio="xMinYMin slice"><g class="ac-l ac-l1"><path d="M-220,230 C-200,259 -41,259 -21,195 C6,275 219,275 246,159 C269,197 451,197 474,121 C502,152 726,152 754,78 C783,138 1010,138 1039,30 C1055,61 1184,61 1200,-40 L1200,-60 L-220,-60 Z" fill="#271a47" opacity="0.7"/><path d="M-220,230 C-200,259 -41,259 -21,195 C6,275 219,275 246,159 C269,197 451,197 474,121 C502,152 726,152 754,78 C783,138 1010,138 1039,30 C1055,61 1184,61 1200,-40 " fill="none" stroke="#c9b8ff" stroke-opacity="0.1" stroke-width="2"/></g><g class="ac-l ac-l2"><path d="M-220,190 C-197,238 -12,238 11,155 C30,179 182,179 201,117 C232,160 477,160 508,76 C525,93 663,93 680,29 C708,56 932,56 960,-40 L960,-60 L-220,-60 Z" fill="#1f143c" opacity="0.85"/><path d="M-220,190 C-197,238 -12,238 11,155 C30,179 182,179 201,117 C232,160 477,160 508,76 C525,93 663,93 680,29 C708,56 932,56 960,-40 " fill="none" stroke="#c9b8ff" stroke-opacity="0.14" stroke-width="2"/></g><g class="ac-l ac-l3"><path d="M-220,150 C-200,198 -37,198 -17,113 C5,158 183,158 206,73 C235,95 466,95 494,27 C515,54 679,54 700,-40 L700,-60 L-220,-60 Z" fill="#170e2d" opacity="0.95"/><path d="M-220,150 C-200,198 -37,198 -17,113 C5,158 183,158 206,73 C235,95 466,95 494,27 C515,54 679,54 700,-40 " fill="none" stroke="#c9b8ff" stroke-opacity="0.2" stroke-width="2"/></g></svg>
+        </div>
+        <img class="as-ground as-ground-f" src="images/scenes/pieces-front.svg" alt="" aria-hidden="true" />
+        <ol class="captions" id="captions">
+          <li data-from="0.05" data-to="0.38"><span class="t-h2 cap-t">A thousand little pieces.</span><span class="cap-s">Ideas, habits, half-finished sketches and a lot of late nights.</span></li>
+          <li data-from="0.5" data-to="0.92"><span class="t-h2 cap-t">Put together, they make <span class="accent">Vishal.</span></span><span class="cap-s">CS at SSN and Data Science at IIT Madras. Based in Chennai.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="story" id="about">
+      <div class="story-sticky">
+        <div class="horizon" data-pal="night" data-mode="scene" aria-hidden="true"></div>
+        <div class="wrap story-inner">
+          <div class="term">
+            <div class="term-bar" aria-hidden="true">
+              <span class="term-dots"><i></i><i></i><i></i></span>
+              <span class="term-title">zsh</span>
+            </div>
+            <div class="term-body" data-lenis-prevent>
+              <p class="term-line" aria-hidden="true"><span class="term-path">~</span> % whoami</p>
+              <p class="story-text" id="story-text"></p>
+              <div class="term-log" id="term-log" aria-live="polite"></div>
+              <p class="term-line term-end"><span class="term-path">~</span> % <span class="term-typed" id="term-typed"></span><span class="term-cursor"></span></p>
+              <input class="term-input" id="term-input" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Terminal. Try ls, cat or clear." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sides" id="sides" aria-label="Three sides of me">
+      <div class="sides-sticky">
+        <div class="trimurti" id="trimurti"></div>
+        <div class="tm-foot wrap">
+          <h2 class="tm-title">Three sides <span class="accent">of me.</span></h2>
+          <nav class="tm-labels" id="tm-labels" aria-label="Three sides of me"></nav>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= WORK ================= -->
+    <section class="work section" id="work">
+      <div class="wrap section-head">
+        <h2 class="t-h2 reveal">Research, products <span class="accent">and games.</span></h2>
+        <p class="lead reveal">Three papers, a hackathon podium and the things I build for fun.</p>
+      </div>
+      <div class="wrap work-grid" id="work-grid"></div>
+      <div class="horizon" data-pal="dusk" aria-hidden="true"></div>
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+    <section class="skills" aria-label="Toolkit">
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq-a"></div></div>
+      <div class="marquee alt" aria-hidden="true"><div class="marquee-track" id="mq-b"></div></div>
+      <p class="sr-only" id="skills-sr"></p>
+    </section>
+
+    <!-- ================= JOURNEY ================= -->
+    <section class="section journey" id="journey">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="t-h2 reveal">How I <span class="accent">got here.</span></h2>
+        </div>
+        <ul class="stats" id="stats" aria-label="At a glance"></ul>
+        <div class="timeline-wrap">
+          <div class="timeline-line" aria-hidden="true"><span id="timeline-fill"></span></div>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+      </div>
+      <div class="horizon" data-pal="ember" aria-hidden="true"></div>
+    </section>
+
+    <!-- ================= CONTACT: dawn ================= -->
+    <section class="dawn" id="contact">
+      <div class="dawn-sticky">
+        <div class="dawn-sky" aria-hidden="true"></div>
+        <div class="sun" aria-hidden="true"></div>
+        <img class="dl d1" src="images/scenes/dawn-1.svg" alt="" aria-hidden="true" loading="lazy" />
+        <img class="dl d2" src="images/scenes/dawn-2.svg" alt="" aria-hidden="true" loading="lazy" />
+        <img class="dl d3" src="images/scenes/dawn-3.svg" alt="" aria-hidden="true" loading="lazy" />
+        <img class="dl d4" src="images/scenes/dawn-4.svg" alt="" aria-hidden="true" loading="lazy" />
+        <img class="dl d5" src="images/scenes/dawn-5.svg" alt="" aria-hidden="true" loading="lazy" />
+        <div class="dawn-copy wrap">
+          <h2 class="t-h2 dawn-title">Let's make something <span class="accent">together.</span></h2>
+          <p class="dawn-lead">Open to internships, research collaborations and interesting side projects.</p>
+          <a class="btn btn-egg btn-big magnetic" data-mail href="mailto:vishalsubramoniam@gmail.com">Say hello</a>
+          <ul class="socials" id="socials"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer dawn-footer">
+    <p>© <span id="year"></span> <span data-site="name">Vishal S</span></p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/assemble.js"></script>
+  <script src="js/trimurti.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
